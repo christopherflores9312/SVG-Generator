@@ -1,9 +1,12 @@
+// Import required modules
 const inquirer = require('inquirer');
 const fs = require('fs');
+// Import shape classes
 const Triangle = require('./lib/triangle');
 const Circle = require('./lib/circle');
 const Square = require('./lib/square');
 
+// Define the questions to be prompted to the user
 const promptQuestions = [
   {
     type: 'input',
@@ -32,10 +35,12 @@ const promptQuestions = [
   }
 ];
 
+// Use inquirer to prompt the questions and handle user input
 inquirer.prompt(promptQuestions).then((answers) => {
+  // Destructure the answers object to extract user input
   const { userText, textColor, shape, shapeColor } = answers;
   let shapeInstance;
-
+  // Instantiate the appropriate shape class based on user input
   switch (shape) {
     case 'Circle':
       shapeInstance = new Circle();
@@ -47,7 +52,8 @@ inquirer.prompt(promptQuestions).then((answers) => {
       shapeInstance = new Square();
       break;
   }
-
+  
+  // Set the color for the selected shape instance
   shapeInstance.setColor(shapeColor);
 
   // Generate the SVG content
