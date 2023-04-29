@@ -57,7 +57,7 @@ inquirer.prompt(promptQuestions).then((answers) => {
   svgContent += `</svg>`;
 
   // Save the SVG content to a file named "logo.svg".
-  fs.writeFileSync('logo.svg', svgContent);
+  fs.writeFileSync('./examples/logo.svg', svgContent);
 
   // Output the success message
   console.log('Generated logo.svg');

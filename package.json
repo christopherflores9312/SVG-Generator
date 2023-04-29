@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/christopherflores9312/SVG-Generator#readme",
   "dependencies": {
-    "inquirer": "^9.2.0",
+    "inquirer": "^7.3.3",
     "jest": "^29.5.0"
   }
 }
