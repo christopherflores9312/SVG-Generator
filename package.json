@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/christopherflores9312/SVG-Generator/issues"
   },
-  "homepage": "https://github.com/christopherflores9312/SVG-Generator#readme"
+  "homepage": "https://github.com/christopherflores9312/SVG-Generator#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
 }
